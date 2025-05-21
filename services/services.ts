@@ -3,6 +3,105 @@ import { skipToken, useMutation, useQuery } from '@tanstack/react-query';
 import { getAxiosInstance } from './apiClient';
 import { getCookie } from 'cookies-next';
 
+const mockDataForExpCreation = {
+  data: {
+    templates: [
+      {
+        exp: {
+          id: 'khsghjf',
+          categoryId: 1,
+          cityId: 1,
+          title: 'موسیقی ایران',
+          description: 'ها ها هااااااای',
+          label: null,
+          isSeries: true,
+          creatorUserId: '01JRN3MW7RYT8TPDZYVAG51751',
+        },
+        faqs: [
+          {
+            question:
+              'می‌تونم گربه‌مو بیارم؟می‌تونم گربه‌مو بیارم؟ می‌تونم گربه‌مو بیارم؟',
+            answer:
+              'صددرصد. اگه گربه دارید برای شما 120% تخفیف درنظر گرفته می‌شه.',
+          },
+          {
+            question:
+              'باید خودم دسته بیارمباید خودم دسته بیارم؟؟ باید خودم دسته بیارم؟',
+            answer: 'نه دسته اضافه داریم',
+          },
+        ],
+        medias: [
+          {
+            url: '/public/experience/skjdfbhsf/first.jpg',
+            type: 'photo',
+          },
+          {
+            url: '/public/experience/skjdfbhsf/second.jpg',
+            type: 'photo',
+          },
+          {
+            url: '/public/experience/skjdfbhsf/third.jpg',
+            type: 'photo',
+          },
+        ],
+      },
+    ],
+    inclusions: [
+      {
+        id: 1,
+        title: 'پذیرایی',
+      },
+      {
+        id: 2,
+        title: 'شاباش',
+      },
+    ],
+    venues: [
+      {
+        id: 1,
+        title: 'کافه رایا',
+      },
+    ],
+    directors: [
+      {
+        userId: '01JRN3MW7RYT8TPDZYVAG51751',
+        name: 'محمد سیفی',
+        bio: 'حاج ممد هستم',
+        photoUrl: '/public/director/jjj.jpeg',
+      },
+      {
+        userId: '01JRN3MW7RYT8TPDZAG51751111',
+        name: 'نام تست',
+        bio: 'حاج ممد هستم',
+        photoUrl: '/public/director/jjj.jpeg',
+      },
+    ],
+    assistants: [],
+    categories: [
+      {
+        id: 1,
+        title: 'موسیقی',
+      },
+      {
+        id: 2,
+        title: 'بازی',
+      },
+      {
+        id: 3,
+        title: 'خلق',
+      },
+      {
+        id: 4,
+        title: 'فیلم',
+      },
+      {
+        id: 5,
+        title: 'آشپزی',
+      },
+    ],
+  },
+};
+
 type ClientType = 'web' | 'telegram';
 
 type ExperienceStatus = 'PUBLISHED';
@@ -152,6 +251,31 @@ export interface GetDataForExperienceCreationProps extends Response {
   };
 }
 
+interface CreateExperienceProps {
+  title: string;
+  description: string;
+  categoryId: number;
+  faqs: {
+    question: string;
+    answer: string;
+  }[];
+  isSeries: boolean;
+  creatorUserId: string;
+  sessions: {
+    time: string; // Format: "YYYY-MM-DD HH:mm:ss"
+    description: string;
+    publishTime: string; // Format: "YYYY-MM-DD HH:mm:ss"
+    duration: number; // in hours
+    venueId: number;
+    price: number; // in currency units
+    capacity: number;
+    groupLink: string;
+    allowedGender: 'all' | 'male' | 'female';
+    directorsUserId: string[];
+    assistantsUserId: string[];
+  }[];
+}
+
 const getInvoice = async (
   args: GetInvoiceRequestProps
 ): Promise<GetInvoiceResponseProps> => {
@@ -228,8 +352,16 @@ const getDataForExperienceCreation =
         },
       }
     );
+    data.result = mockDataForExpCreation.data;
     return data;
   };
+
+const createExperience = async (
+  args: CreateExperienceProps
+): Promise<Response> => {
+  const { data } = await getAxiosInstance().post('/api/auth/login', args);
+  return data;
+};
 
 export function useGetExperienceDetail({ id }: { id: string }) {
   return useQuery({
@@ -260,6 +392,12 @@ export function useVerifyOtp() {
 export function useLogin() {
   return useMutation({
     mutationFn: login,
+  });
+}
+
+export function useCreateExperience() {
+  return useMutation({
+    mutationFn: createExperience,
   });
 }
 

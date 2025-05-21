@@ -8,18 +8,23 @@ interface NewExperienceFormContextProps {
   date: string;
   timeOfStart: string;
   price: string;
-  capacity: string;
+  capacity: number | undefined;
   telegramLink: string;
   inclutions: string[];
   faq: string[];
   address: string;
+  neighborHood: string;
   locationLink: string;
+  director: string;
+  directorRole: string;
+  directorBio: string;
+  venue: string;
 }
 
 export const NewExperienceFormContext =
   createFormContext<NewExperienceFormContextProps>({
     address: '',
-    capacity: '',
+    capacity: undefined,
     category: '',
     date: '',
     description: '',
@@ -31,4 +36,9 @@ export const NewExperienceFormContext =
     price: '',
     telegramLink: '',
     timeOfStart: '',
+    neighborHood: '',
+    director: '',
+    directorBio: '',
+    directorRole: '',
+    venue: '',
   });
