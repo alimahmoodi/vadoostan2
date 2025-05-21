@@ -6,7 +6,7 @@ import axios, {
   AxiosResponse,
 } from 'axios';
 
-export const baseUrl = 'cute-crayfish-currently.ngrok-free.app';
+export const baseUrl2 = 'cute-crayfish-currently.ngrok-free.app';
 
 const baseConfig: AxiosRequestConfig = {
   baseURL: '/', // replace with your base API URL
