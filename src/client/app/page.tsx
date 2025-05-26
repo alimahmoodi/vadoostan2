@@ -1,4 +1,4 @@
-import { ActionButton, Text } from '@/app/components';
+import { ActionButton, Text } from 'shared-components';
 import classes from './style.module.scss';
 import { Button } from '@mantine/core';
 import Link from 'next/link';

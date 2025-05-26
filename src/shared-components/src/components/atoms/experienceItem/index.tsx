@@ -1,12 +1,11 @@
-import { colors } from '@/colors';
+import { colors } from '../../colors';
 import classes from './style.module.scss';
-import { Text } from '@/app/components';
+import { Text } from '../../atoms';
 import { redirect, RedirectType } from 'next/navigation';
 import classNames from 'classnames';
 import moment from 'moment-jalaali';
-import { categoryLookup } from '@/app/utils/categoryLookup';
-import { priceHumanize } from '@/app/utils/priceHumanize';
-import { ExperienceItemProps } from '@/sharedTypes.type';
+import { categoryLookup, priceHumanize } from '../../utils';
+import { ExperienceItemProps } from '../../sharedTypes.type';
 
 const ExperienceItem = ({
   category,

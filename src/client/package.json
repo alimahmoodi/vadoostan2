@@ -9,6 +9,8 @@
     "lint": "next lint",
     "prepare": "husky"
   },
-  "dependencies": {},
+  "dependencies": {
+    "shared-components": "0.1.0"
+  },
   "devDependencies": {}
 }

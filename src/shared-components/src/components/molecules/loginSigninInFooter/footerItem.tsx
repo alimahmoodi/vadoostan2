@@ -1,6 +1,6 @@
 'use client';
-import { colors } from '@/colors';
-import { Text } from '@/app/components';
+import { colors } from '../../colors';
+import { Text } from '../../atoms';
 import classes from './style.module.scss';
 
 const FooterItem = ({

@@ -3,10 +3,10 @@ import classNames from 'classnames';
 import classes from './style.module.scss';
 import Image from 'next/image';
 import moment from 'moment-jalaali';
-import { colors } from '@/colors';
+import { colors } from '../../colors';
 import { ExperienceListContext } from '@/app/experience-list/provider';
 import { useContext, useRef, WheelEventHandler } from 'react';
-import { Text } from '@/app/components';
+import { Text } from '../../atoms';
 
 moment.loadPersian({ usePersianDigits: true, dialect: 'persian-modern' });
 

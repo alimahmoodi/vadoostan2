@@ -1,13 +1,13 @@
 import type { NextConfig } from 'next';
 import path from 'path';
-import { baseUrl2 } from './services/apiClient';
+import { baseUrl } from 'shared-components';
 
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: baseUrl2,
+        hostname: baseUrl,
         port: '',
         pathname: '/public/**',
         search: '',
@@ -22,10 +22,11 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/api/:path*', // Your local proxy endpoint
-        destination: `https://${baseUrl2}/api/:path*`, // Target URL
+        destination: `https://${baseUrl}/api/:path*`, // Target URL
       },
     ];
   },
+  // transpilePackages: ['shared-components'],
 };
 
 export default nextConfig;

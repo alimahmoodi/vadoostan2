@@ -1,9 +1,9 @@
 'use client';
-import { LoginHeader, Otp, successToast } from '@/app/components';
+import { LoginHeader, Otp, successToast } from 'shared-components';
 import { useState } from 'react';
 import { LoginForm } from './form';
 import { useRouter } from 'next/navigation';
-import { useLogin } from '@/services/services';
+import { useLogin } from 'shared-components';
 
 type LoginPageStatus = 'login' | 'otp';
 

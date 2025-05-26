@@ -1,10 +1,10 @@
 'use client';
-import { LoginHeader } from '../components';
+import { LoginHeader } from 'shared-components';
 import classes from './style.module.scss';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Button, Skeleton, Text } from '@mantine/core';
-import { useGetInvoice } from '@/services/services';
-import { priceHumanize } from '../utils/priceHumanize';
+import { useGetInvoice } from 'shared-components';
+import { priceHumanize } from 'shared-components';
 import { Suspense } from 'react';
 const Invoice = () => {
   const { back } = useRouter();

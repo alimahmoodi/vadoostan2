@@ -1,7 +1,7 @@
 import { Button, ButtonProps, ElementProps } from '@mantine/core';
 import classNames from 'classnames';
 import classes from './style.module.scss';
-import { colors } from '@/colors';
+import { colors } from '../../colors';
 
 interface MyTextInputProps
   extends ButtonProps,

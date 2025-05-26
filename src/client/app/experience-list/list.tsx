@@ -5,14 +5,14 @@ import {
   ExperienceItem,
   LoginHeader,
   Text,
-} from '@/app/components';
+} from 'shared-components';
 import classes from './style.module.scss';
 import moment from 'moment-jalaali';
 import { Button, Loader } from '@mantine/core';
 import { ExperienceListContext } from './provider';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useGetExperienceList } from '@/services/services';
+import { useGetExperienceList } from 'shared-components';
 import _ from 'lodash';
 import { colors } from '@/colors';
 

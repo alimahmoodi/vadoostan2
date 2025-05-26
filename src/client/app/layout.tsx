@@ -9,7 +9,7 @@ import {
 } from '@mantine/core';
 import classes from './style.module.scss';
 import './font.module.scss';
-import Providers from '@/services/provider';
+import { Providers } from 'shared-components';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

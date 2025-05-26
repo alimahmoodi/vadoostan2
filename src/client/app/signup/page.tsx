@@ -1,8 +1,7 @@
 'use client';
 import { SignUpForm } from './form';
-import { Otp } from '@/app/components';
 import { useState } from 'react';
-import { LoginHeader } from '@/app/components';
+import { LoginHeader, Otp } from 'shared-components';
 import { useRouter } from 'next/navigation';
 
 type SignupStatus = 'signup' | 'otp';

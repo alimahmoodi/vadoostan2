@@ -1,4 +1,4 @@
-import { ExperienceDetailResponse } from '@/services/services';
+import { ExperienceDetailResponse } from 'shared-components';
 import { Accordion } from '@mantine/core';
 
 export const Faq = ({

@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 import {
   FooterActionBarTemplate,
   ImageUploader,
   LoginHeader,
   TextInput,
-} from '@/app/components';
+} from 'shared-components';
 import { useRouter } from 'next/navigation';
 import classes from './style.module.scss';
 import DatePicker from 'react-multi-date-picker';
@@ -27,7 +28,7 @@ import { TimeInput } from '@mantine/dates';
 import {
   useCreateExperience,
   useGetDataForExperienceCreation,
-} from '@/services/services';
+} from 'shared-components';
 import { NewExperienceFormContext } from './formContext';
 import { colors } from '@/colors';
 import { useState } from 'react';

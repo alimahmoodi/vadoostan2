@@ -1,4 +1,4 @@
-import { baseUrl } from '@/services/apiClient';
+import { baseUrl } from 'shared-components';
 import classes from './style.module.scss';
 import Image from 'next/image';
 

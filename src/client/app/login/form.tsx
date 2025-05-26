@@ -1,8 +1,8 @@
 'use client';
-import { ActionButton, ErrorText } from '@/app/components';
+import { ActionButton, ErrorText } from 'shared-components';
 import { LoginFormContext, LoginFormProvider } from './formProvider';
 import { Input, TextInput } from '@mantine/core';
-import { inputWrapperErrorStyle, phoneNumberRule } from '@/app/utils';
+import { inputWrapperErrorStyle, phoneNumberRule } from 'shared-components';
 
 interface SignUpFormProps {
   onSubmitForm: (phone?: string) => void;

@@ -1,5 +1,5 @@
 'use client';
-import { useGetExperienceDetail } from '@/services/services';
+import { useGetExperienceDetail } from 'shared-components';
 import classes from './style.module.scss';
 import {
   DescriptionArea,
@@ -8,7 +8,7 @@ import {
   FooterActionBarTemplate,
   ActionButton,
   ErrorView,
-} from '@/app/components';
+} from 'shared-components';
 import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 import React from 'react';
@@ -17,7 +17,7 @@ import { colors } from '@/colors';
 import { ExperienceDate } from './experienceDate';
 import { DirectorInformation } from './directorInformation';
 import { Faq } from './faq';
-import { priceHumanize } from '@/app/utils/priceHumanize';
+import { priceHumanize } from 'shared-components';
 import { ExperienceBackIcon } from './experienceBackIcon';
 
 export default function Experience({

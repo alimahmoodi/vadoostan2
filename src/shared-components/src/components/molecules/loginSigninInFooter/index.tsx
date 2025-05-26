@@ -1,6 +1,6 @@
 'use server';
 import { ActionButton, FooterActionBarTemplate } from '../../atoms';
-import { Text } from '@/app/components';
+import { Text } from '../../atoms';
 import classes from './style.module.scss';
 import Link from 'next/link';
 import { cookies } from 'next/headers';

@@ -1,0 +1,10 @@
+{
+  "name": "shared-components",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src",
+  "types": "./src",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}

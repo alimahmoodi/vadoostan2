@@ -1,10 +1,10 @@
 'use client';
 import { useState, useEffect } from 'react';
 import OtpInput from 'react-otp-input';
-import { ActionButton, errorToast, successToast } from '@/app/components';
 import classes from './style.module.scss';
-import { useLogin, useVerifyOtp } from '@/services/services';
 import { setCookie } from 'cookies-next';
+import { ActionButton, errorToast, successToast } from '@/src/atoms';
+import { useLogin, useVerifyOtp } from '@/src/services/services';
 
 interface OtpProps {
   onVerify?: () => void;

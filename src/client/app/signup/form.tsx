@@ -4,7 +4,7 @@ import {
   successToast,
   TextInput,
   ErrorText,
-} from '@/app/components';
+} from 'shared-components';
 import classes from './style.module.scss';
 import { SignupFormContext, SignupFormProvider } from './formProvider';
 import { Checkbox, Grid, Input } from '@mantine/core';
@@ -13,8 +13,8 @@ import {
   inputWrapperErrorStyle,
   nameRules,
   phoneNumberRule,
-} from '@/app/utils';
-import { useSignup } from '@/services/services';
+} from 'shared-components';
+import { useSignup } from 'shared-components';
 // import { PersianSupportNumberInput } from '../components/atoms/persianSupportInput';
 import classNames from 'classnames';
 

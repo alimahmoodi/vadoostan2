@@ -1,4 +1,4 @@
-import { LogInSignupLayout } from '@/app/components';
+import { LogInSignupLayout } from 'shared-components';
 export default function RootLayout({
   children,
 }: Readonly<{

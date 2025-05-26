@@ -1,11 +1,14 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import { ExperienceItem, LoginHeader } from '../components';
+import { ExperienceItem, LoginHeader } from 'shared-components';
 import classes from './style.module.scss';
 import { Text } from '@mantine/core';
-import { ExperienceItemProps, ExperienceItemStatus } from '@/sharedTypes.type';
+import {
+  ExperienceItemProps,
+  ExperienceItemStatus,
+} from 'shared-components/src/sharedTypes.type';
 import { useRouter } from 'next/navigation';
-import { useGetUserExperienceList } from '@/services/services';
+import { useGetUserExperienceList } from 'shared-components';
 import { getCookie } from 'cookies-next';
 import { jwtDecode } from 'jwt-decode';
 
