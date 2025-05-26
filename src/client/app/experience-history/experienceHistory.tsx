@@ -3,10 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ExperienceItem, LoginHeader } from 'shared-components';
 import classes from './style.module.scss';
 import { Text } from '@mantine/core';
-import {
-  ExperienceItemProps,
-  ExperienceItemStatus,
-} from 'shared-components/src/sharedTypes.type';
+import { ExperienceItemProps, ExperienceItemStatus } from 'shared-components';
 import { useRouter } from 'next/navigation';
 import { useGetUserExperienceList } from 'shared-components';
 import { getCookie } from 'cookies-next';

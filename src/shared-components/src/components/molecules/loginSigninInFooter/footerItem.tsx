@@ -1,5 +1,4 @@
-'use client';
-import { colors } from '../../colors';
+import { colors } from '@/src/utils';
 import { Text } from '../../atoms';
 import classes from './style.module.scss';
 

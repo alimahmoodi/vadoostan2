@@ -1,4 +1,4 @@
-import { PersianUtil } from 'shared-components';
+import { PersianUtil } from '@/src/utils';
 import { InputBase, InputBaseProps } from '@mantine/core';
 import { InputHTMLAttributes } from 'react';
 import { IMaskInput } from 'react-imask';

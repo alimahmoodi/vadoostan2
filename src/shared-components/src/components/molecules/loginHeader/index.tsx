@@ -1,5 +1,5 @@
-import classes from './style.module.scss';
 import { BackIcon } from '../../atoms';
+import classes from './style.module.scss';
 import { CSSProperties } from 'react';
 
 const LoginHeader = ({

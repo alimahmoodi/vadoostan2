@@ -26,7 +26,10 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  // transpilePackages: ['shared-components'],
+  transpilePackages: ['shared-components'],
+  experimental: {
+    externalDir: true, // Allows importing from outside the app directory
+  },
 };
 
 export default nextConfig;

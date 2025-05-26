@@ -1,5 +1,7 @@
 'use client';
-import { colors } from '@/colors';
+
+import { colors } from '@/src/utils';
+
 interface Props {
   isActive: boolean;
 }

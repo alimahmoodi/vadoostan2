@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import OtpInput from 'react-otp-input';
 import classes from './style.module.scss';
 import { setCookie } from 'cookies-next';
-import { ActionButton, errorToast, successToast } from '@/src/atoms';
+import { ActionButton, errorToast, successToast } from '../../atoms';
 import { useLogin, useVerifyOtp } from '@/src/services/services';
 
 interface OtpProps {
