@@ -1,4 +1,5 @@
-import { ActionButton, TextInput } from 'test';
+import { TextInput } from 'test';
+import { ActionButton } from 'shared-components';
 
 export default function Home() {
   return (
